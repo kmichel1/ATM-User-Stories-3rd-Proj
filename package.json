@@ -1,0 +1,22 @@
+{
+  "name": "atm",
+  "version": "1.0.0",
+  "description": "devCodeCamp 3rd project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmichel1/ATM-User-Stories-3rd-Proj.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kmichel1/ATM-User-Stories-3rd-Proj/issues"
+  },
+  "homepage": "https://github.com/kmichel1/ATM-User-Stories-3rd-Proj#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
