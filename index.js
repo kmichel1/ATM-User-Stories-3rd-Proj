@@ -1,7 +1,6 @@
 "use strict";
 
-let pinFileJs = require('./pinFile')
-let balanceFileJs = require('./balanceFile')
+let atmInfo = require('./atm')
+console.log(atmInfo.getBalance);
 
-console.log(pinFileJs);
-console.log(balanceFileJs);
+
