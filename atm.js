@@ -3,10 +3,7 @@
 let pinFile = require('./account')
 console.log(pinFile.pinNumber);
 
-module.exports.validatePin = validatePin;
-module.exports.getBalance = getBalance;
-module.exports.withDraw = withDraw;
-module.exports.deposit = deposit;
+
 
 function validatePin(){
     let user1;
@@ -22,30 +19,26 @@ console.log("Your pin number has been validated!");
 }
 
 function getBalance(){
-    let balancePrompt;
-    while(true){
-        balancePrompt = prompt("Please enter your account pin number");
-    if(balancePrompt == pin){
-        break;
-    }
-    console.log("Incorrect pin number. Please enter correct pin number.");
-}
-console.log(pinFile.balanceNumber);
+    console.log(pinFile.balanceNumber);
 }
 
 function withDraw(){
     let withdrawMoney = prompt("How much would you like to withdraw?");
     withDrawMoney = Number(withdrawMoney);
-    withdrawBalance = withdrawMoney - pinFile.balanceNumber;
+    pinFile.balanceNumber = pinFile.balanceNumber - withdrawMoney;
 
-    console.log(withdrawBalance);
+    console.log(pinFile.balanceNumber);
 }
 
 function deposit(){
     let depositMoney = prompt("How much do you want to deposit?");
     depositMoney = Number(depositMoney);
-    balance = depositMoney + pinFile.balanceNumber;
+    pinFile.balanceNumber = pinFile.balanceNumber = depositMoney;
   
-    console.log(balance);
+    console.log(pinFile.balanceNumber);
 }
 
+module.exports.validatePin = validatePin;
+module.exports.getBalance = getBalance;
+module.exports.withDraw = withDraw;
+module.exports.deposit = deposit;
